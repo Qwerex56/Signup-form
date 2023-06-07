@@ -1,30 +1,22 @@
 <template>
   <div class="input-form">
     <div class="input-form__signup-input">
-      <img :class="{'input-form__signup-input__err-img' : true}" src="@/assets/images/icon-error.svg" alt="ERR">
+      <img v-if="false" class="input-form__signup-input__err-img" src="@/assets/images/icon-error.svg" alt="ERR">
       <input class="input-form__signup-input__input"
-        :class="{'error': true}"
+        :class="{'error': false}"
         :type="inputType" 
         :value="modelValue" 
         @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)" 
         :placeholder="inputPlaceholder">
     </div>
-    <p class="input-form__err-msg">
-      <slot name="error-description"></slot>
+    <p v-if="false" class="input-form__err-msg">
+      <slot name="error-description">Error MSG</slot>
     </p>
   </div>
 </template>
 
 <script lang="ts">
-// import { useVuelidate } from '@vuelidate/core';
-// import { required, alpha } from '@vuelidate/validators';
-
 export default {
-  // setup() {
-  //   return {
-  //     v$: useVuelidate(),
-  //   };
-  // },
   props: {
     modelValue: {
       type: String,
@@ -32,7 +24,7 @@ export default {
     },
     inputType: {
       type: String,
-      required: true,
+      required: false,
       default: 'text',
     },
     inputPlaceholder: {
@@ -42,12 +34,6 @@ export default {
     },
   },
   emits: ['update:modelValue'],
-  // validations() {
-  //   return {
-  //     modelValue: { required, alpha },
-  //   }
-  // }
-
 }
 </script>
 
@@ -70,15 +56,15 @@ export default {
       width: 100%;
   
       border: .0625rem solid $grayish-blue;
-      border-radius: .125rem;
+      border-radius: .25rem;
       outline: none;
 
       color: $dark-blue;
   
-      font-size: 1rem;
-      font-weight: 600;
-      text-indent: 1rem;
-      line-height: 300%;
+      font-size: .75rem;
+      font-weight: 700;
+      text-indent: 1.25rem;
+      line-height: 440%;
       
       transition: 0.2s;
   
@@ -87,11 +73,12 @@ export default {
       }
 
       &::placeholder {
-        font-weight: 400;
+        font-weight: 700;
       }
 
       &.error {
-        border-color: $red;
+        border: .125rem solid $red;
+
         color: $red;
       }
     }
@@ -99,7 +86,7 @@ export default {
     &__err-img {
       position: absolute;
       justify-self: right;
-      width: 1.5rem;
+      width: 1.625rem;
 
       margin-left: auto;
 
@@ -111,8 +98,9 @@ export default {
   &__err-msg {
     color: $red;
     
-    font-size: 0.5rem;
+    font-size: 12px;
     font-weight: 400;
+    font-style: italic;
     text-align: right;
   }
 }
