@@ -15,8 +15,7 @@ export default {
 
 <style scoped lang="scss">
 .promo-offer {
-  width: fit-content;
-  padding: 24px 80px;
+  padding: 1.5rem 5rem;
 
   border-radius: .5rem;
   box-shadow: 0rem .375rem transparentize($dark-blue, $amount: 0.6);
