@@ -7,12 +7,6 @@
   </p>
 </template>
 
-<script lang="ts">
-export default {
-  
-}
-</script>
-
 <style scoped lang="scss">
 .promo-offer {
   padding: 1.5rem 5rem;

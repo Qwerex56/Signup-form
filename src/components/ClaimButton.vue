@@ -1,15 +1,14 @@
 <template>
-  <button class="claim-button">
+  <button class="claim-button"
+    @click="$emit('sendInput')">
     <slot name="description">
       Lorem, ipsum dolor.
     </slot>
   </button>
 </template>
 
-<script lang="ts">
-export default {
-
-}
+<script setup lang="ts">
+defineEmits(['sendInput']);
 </script>
 
 <style scoped lang="scss">

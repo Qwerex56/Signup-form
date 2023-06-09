@@ -27,11 +27,6 @@ export default {
     SignForm,
     PromoOffer,
 },
-  data() {
-    return {
-      someVal: '',
-    }
-  }
 }
 </script>
 
@@ -39,6 +34,7 @@ export default {
 .sign-up-component {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   height: 100vh;
   overflow: auto;
@@ -62,6 +58,8 @@ export default {
     flex-direction: column;
 
     gap: 2rem;
+
+    max-width: 540px;
   }
 
   &__title {
@@ -80,15 +78,13 @@ export default {
     display: flex;
     flex-direction: column;
 
-    gap: 1.5rem
+    gap: 1.5rem;
+
+    max-width: 540px;
   }
 
   @media screen and (min-width: 768px) {
     background-image: url('@/assets/images/bg-intro-desktop.png');
-
-    &__header {
-      padding: 0rem 5rem;
-    }
     
     &__title {
       font-size: 2rem;
