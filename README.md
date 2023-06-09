@@ -29,9 +29,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Moblie Design](./MobileDesign.jpeg)
-![Desktop Design](./DesktopDesign.jpeg)
-![Active State](./DesktopActive.jpeg)
+![Moblie Design](./public/MobileDesign.jpeg)
+![Desktop Design](./public/DesktopDesign.jpeg)
+![Active State](./public/DesktopActive.jpeg)
 ### Links
 
 - Solution URL: [Github](https://github.com/Qwerex56/Signup-form)
