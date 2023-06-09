@@ -31,7 +31,7 @@ Users should be able to:
 
 ![Moblie Design](./public/MobileDesign.jpeg)
 ![Desktop Design](./public/DesktopDesign.jpeg)
-![Active State](./public/DesktopActive.jpeg)
+![Active State](./public/DestopActive.jpeg)
 ### Links
 
 - Solution URL: [Github](https://github.com/Qwerex56/Signup-form)
